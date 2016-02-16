@@ -5,7 +5,7 @@ import java.util.List;
 import java.math.BigInteger;
 
 public class Q3 {
-    
+    //following sqrt function taken from http://faruk.akgul.org/blog/javas-missing-algorithm-biginteger-sqrt/
     public static BigInteger sqrt(BigInteger n) {
         BigInteger a = BigInteger.ONE;
         BigInteger b = new BigInteger(n.shiftRight(5).add(new BigInteger("8")).toString());
@@ -23,20 +23,13 @@ public class Q3 {
         long biglong;
         biglong = kindOfBig.longValue();
         List primeList = new ArrayList();
-//	for(int i = 0; i < biglong; i++) {
-//            primeList.add(i);
-//	}
+
         for (int j = 3; j < biglong; j++) {
             while ((big.mod(BigInteger.valueOf(j)) == BigInteger.ZERO) && (big.divide(BigInteger.valueOf(j)) != BigInteger.ONE)) {
                 big = big.divide(BigInteger.valueOf(j));
                 System.out.println(big.toString());
                 primeList.add(j);
             }
-            
-            //BigInteger k = big.mod(BigInteger.valueOf(j));
-            //if (k.longValue() == 0) {
-            //    primeList.remove(k.longValue());
-            //}
         }
         System.out.println(primeList.toString());
         
