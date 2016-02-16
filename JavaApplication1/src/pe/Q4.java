@@ -24,7 +24,6 @@ public class Q4 {
                         break;
                     }
                 }
-                //System.out.println(strVal.charAt(strVal.length() - k - 1) + "," + strVal.charAt(k));
                 if (woo == true) {
                     System.out.printf("%d %d\n", i, j);
                     if (i*j > max1*max2) {
@@ -34,10 +33,6 @@ public class Q4 {
                 }
             }
         }
-//        for (int i = 0; i < test.length(); i++) {
-//            if (test.charAt(test.length() - i - 1) == test.charAt(i)) {
-//                System.out.println(test.charAt(test.length() - i - 1) + "," + test.charAt(i));
-//        }
         System.out.printf("%d %d %d", max1, max2, (max1*max2));
     }
 }
